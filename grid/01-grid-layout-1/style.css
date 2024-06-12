@@ -1,3 +1,8 @@
+:root {
+  --row-width: 100px;
+  --col-width: 300px;
+}
+
 body, html {
   height: 100%;
   margin: 0;
@@ -44,4 +49,36 @@ body, html {
 
 .footer {
   background-color: #393f4d;
+}
+
+ .container {
+   display: grid;
+   grid-template-columns: calc(1*var(--col-width)) calc(3*var(--col-width));
+   grid-template-rows: calc(1*var(--row-width)) calc(1*var(--row-width)) calc(5*var(--row-width)) calc(1*var(--row-width));
+   gap: 15px;
+ }
+
+ .header {
+  grid-column: 1/span 2; 
+  grid-row: 1/span 1;
+}
+
+.sidebar {
+  grid-column: 1/span 1; 
+  grid-row: 2 / span 2;
+}
+
+.nav {
+  grid-column: 2 / span 1; 
+  grid-row: 2 / span 1;
+}
+
+.article {
+  grid-column: 2/span 1; 
+  grid-row: 3 / span 1;
+}
+
+.footer {
+  grid-column: 1/span 2; 
+  grid-row: 4 / span 1;
 }
