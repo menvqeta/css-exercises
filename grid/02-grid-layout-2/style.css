@@ -1,3 +1,8 @@
+:root {
+  --row-width: 1fr;
+  --col-width: 3fr;
+}
+
 body, html {
   height: 100%;
   margin: 0;
@@ -47,4 +52,11 @@ body, html {
 .footer {
   background-color: #393f4d;
   grid-column: 1 / 3;
+}
+
+.container {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: eval(1*var(--col-width)) eval(3*var(--col-width));
+  grid-template-rows: eval(1*var(--row-width)) eval(1*var(--row-width)) eval(5*var(--row-width)) eval(1*var(--row-width))
 }
